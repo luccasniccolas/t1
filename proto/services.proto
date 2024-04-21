@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package grcp;
+
+option go_package = "github.com/luccasniccolas/t1/proto";
+
+service Example {
+    rpc GetById(QueryId) returns (Game);
+    rpc GetByName(QueryName) returns (Game);
+    rpc GetAll(Empty) returns (GamesList);
+}
+
+message Game {
+    int32 id = 1;
+    string name = 2;
+    string release_date = 3;
+    int32 required_age = 4;
+    string categories = 5;
+    double price = 6;
+}
+
+message GamesList {
+    repeated Game list = 1;
+}
+
+message QueryId {
+    int32 id = 1;
+}
+
+message QueryName {
+    string name = 1;
+}
+
+message Empty {}
