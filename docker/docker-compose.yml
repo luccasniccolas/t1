@@ -1,0 +1,69 @@
+version: '3.8'
+
+networks:
+  mynetwork:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+services:
+  postgresql-master:
+    image: 'bitnami/postgresql:14'
+    ports:
+      - '5432'
+    environment:
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=user
+      - POSTGRESQL_DATABASE=tarea1
+    volumes:
+      - /home/lucas/workspace/sistemas_distribuidos/tarea1/postgres/schema.sql:/docker-entrypoint-initdb.d/create_schema.sql
+      - ../postgres/data.sql:/docker-entrypoint-initdb.d/data.sql
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.5
+
+  redis-master:
+    image: 'bitnami/redis:7.0.4-debian-11-r23'
+    expose:
+      - '6379'
+    environment:
+      - REDIS_REPLICATION_MODE=master
+      - REDIS_PASSWORD=master1234
+    command: /opt/bitnami/scripts/redis/run.sh --maxmemory-policy allkeys-lru --maxmemory 2mb
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.6
+
+  redis-replica-uno:
+    image: 'bitnami/redis:7.0.4-debian-11-r23'
+    expose:
+      - '6379'
+    depends_on:
+      - redis-master
+    environment:
+      - REDIS_REPLICATION_MODE=slave
+      - REDIS_MASTER_HOST=redis-master
+      - REDIS_MASTER_PORT_NUMBER=6379
+      - REDIS_MASTER_PASSWORD=master1234
+      - REDIS_PASSWORD=replica1234
+    command: /opt/bitnami/scripts/redis/run.sh --maxmemory-policy allkeys-lru --maxmemory 2mb
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.7
+
+  redis-replica-dos:
+    image: 'bitnami/redis:7.0.4-debian-11-r23'
+    expose:
+      - '6379'
+    depends_on:
+      - redis-master
+    environment:
+      - REDIS_REPLICATION_MODE=slave
+      - REDIS_MASTER_HOST=redis-master
+      - REDIS_MASTER_PORT_NUMBER=6379
+      - REDIS_MASTER_PASSWORD=master1234
+      - REDIS_PASSWORD=replica1234
+    command: /opt/bitnami/scripts/redis/run.sh --maxmemory-policy allkeys-lru --maxmemory 2mb
+    networks:
+      mynetwork:
+        ipv4_address: 172.20.0.8

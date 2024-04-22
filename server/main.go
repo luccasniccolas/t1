@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"net"
+	"time"
 
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -52,7 +53,7 @@ func (s *server) GetById(ctx context.Context, in *pb.QueryId) (*pb.Game, error) 
 
 	if err != nil {
 		if errors.Is(err, pgx.ErrNoRows) {
-			return nil, fmt.Errorf("Juego con ID %d no encontrado", gameId)
+			return nil, fmt.Errorf("Game ID %d not Found", gameId)
 		}
 		return nil, err
 	}
@@ -65,11 +66,52 @@ func (s *server) GetByName(ctx context.Context, in *pb.QueryName) (*pb.Game, err
 }
 
 func (s *server) GetAll(ctx context.Context, empty *pb.Empty) (*pb.GamesList, error) {
-	return nil, nil
+	log.Println("Realizando consulta para obtener todos los juegos")
+	// Consulta para obtener todos los registros
+	query := "SELECT appid, name, release_date, required_age, categories, price FROM steam_games"
+
+	// Ejecuta la consulta
+	rows, err := dbpool.Query(ctx, query)
+	if err != nil {
+		return nil, fmt.Errorf("error al ejecutar la consulta SQL: %v", err)
+	}
+	defer rows.Close()
+
+	// Inicializa la lista de juegos para devolver
+	gamesList := &pb.GamesList{
+		List: make([]*pb.Game, 0), // Inicializa con un slice vacío de juegos
+	}
+
+	// Itera sobre los resultados y construye la lista de juegos
+	for rows.Next() {
+		var game pb.Game
+		var releaseDate time.Time
+		err := rows.Scan(
+			&game.Id,
+			&game.Name,
+			&releaseDate,
+			&game.RequiredAge,
+			&game.Categories,
+			&game.Price,
+		)
+		if err != nil {
+			return nil, fmt.Errorf("error al escanear la fila: %v", err)
+		}
+
+		// Agrega el juego a la lista
+		gamesList.List = append(gamesList.List, &game)
+	}
+
+	// Comprueba si hubo errores en el proceso de iteración
+	if err := rows.Err(); err != nil {
+		return nil, fmt.Errorf("error durante el recorrido de las filas: %v", err)
+	}
+
+	return gamesList, nil
 }
 
 func main() {
-	database_url := "postgresql://postgres:Araya123@localhost:5432/steam"
+	database_url := "postgresql://user:user@172.20.0.5:5432/tarea1"
 	var err error
 	dbpool, err = pgxpool.New(context.Background(), database_url)
 	if err != nil {

@@ -21,8 +21,8 @@ const (
 func main() {
 	// Establece la conexión con Redis
 	client := redis.NewClient(&redis.Options{
-		Addr:     "172.20.0.6:6379",
-		Password: "master1234",
+		Addr:     "172.20.0.7:6379",
+		Password: "replica1234",
 		DB:       0,
 	})
 

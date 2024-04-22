@@ -1,0 +1,163 @@
+Conexión exitosa a Redis: PONG
+Ingrese un ID (-1 para GetAll, 0 para salir): 10
+Resultado de GetById(): 10 Counter-Strike 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 30.116445ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 10
+Resultado obtenido desde la caché Redis: 10 Counter-Strike 7.19 
+Tiempo de consulta total: 360.018µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 20
+Resultado de GetById(): 20 Team Fortress Classic 3.99 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 8.267119ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 20
+Resultado obtenido desde la caché Redis: 20 Team Fortress Classic 3.99 
+Tiempo de consulta total: 230.191µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 30
+Resultado de GetById(): 30 Day of Defeat 3.99 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 10.929163ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 30
+Resultado obtenido desde la caché Redis: 30 Day of Defeat 3.99 
+Tiempo de consulta total: 339.752µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 40
+Resultado de GetById(): 40 Deathmatch Classic 3.99 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 3.223458ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 40
+Resultado obtenido desde la caché Redis: 40 Deathmatch Classic 3.99 
+Tiempo de consulta total: 298.183µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 50
+Resultado de GetById(): 50 Half-Life: Opposing Force 3.99 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 9.172039ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 50
+Resultado obtenido desde la caché Redis: 50 Half-Life: Opposing Force 3.99 
+Tiempo de consulta total: 389.613µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 60
+Resultado de GetById(): 60 Ricochet 3.99 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 4.721887ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 60
+Resultado obtenido desde la caché Redis: 60 Ricochet 3.99 
+Tiempo de consulta total: 462.713µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 70
+Resultado de GetById(): 70 Half-Life 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 3.371263ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 70
+Resultado obtenido desde la caché Redis: 70 Half-Life 7.19 
+Tiempo de consulta total: 258.33µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 80
+Resultado de GetById(): 80 Counter-Strike: Condition Zero 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 2.702089ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 80
+Resultado obtenido desde la caché Redis: 80 Counter-Strike: Condition Zero 7.19 
+Tiempo de consulta total: 259.173µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 130
+Resultado de GetById(): 130 Half-Life: Blue Shift 3.99 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 3.746301ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 130
+Resultado obtenido desde la caché Redis: 130 Half-Life: Blue Shift 3.99 
+Tiempo de consulta total: 311.606µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 220
+Resultado de GetById(): 220 Half-Life 2 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 2.777286ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 220
+Resultado obtenido desde la caché Redis: 220 Half-Life 2 7.19 
+Tiempo de consulta total: 318.129µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 240
+Resultado de GetById(): 240 Counter-Strike: Source 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 10.447641ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 240
+Resultado obtenido desde la caché Redis: 240 Counter-Strike: Source 7.19 
+Tiempo de consulta total: 372.501µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 280
+Resultado de GetById(): 280 Half-Life: Source 0 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 2.567763ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 280
+Resultado obtenido desde la caché Redis: 280 Half-Life: Source 0 
+Tiempo de consulta total: 281.092µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 300
+Resultado de GetById(): 300 Day of Defeat: Source 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 3.764925ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 300
+Resultado obtenido desde la caché Redis: 300 Day of Defeat: Source 7.19 
+Tiempo de consulta total: 213.206µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 320
+Resultado de GetById(): 320 Half-Life 2: Deathmatch 3.99 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 2.912594ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 320
+Resultado obtenido desde la caché Redis: 320 Half-Life 2: Deathmatch 3.99 
+Tiempo de consulta total: 229.11µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 340
+Resultado de GetById(): 340 Half-Life 2: Lost Coast 0 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 12.887076ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 340 
+Resultado obtenido desde la caché Redis: 340 Half-Life 2: Lost Coast 0 
+Tiempo de consulta total: 295.976µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 400
+Resultado de GetById(): 400 Portal 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 2.584071ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 400
+Resultado obtenido desde la caché Redis: 400 Portal 7.19 
+Tiempo de consulta total: 497.828µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 10
+Resultado de GetById(): 10 Counter-Strike 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 2.500357ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 10
+Resultado obtenido desde la caché Redis: 10 Counter-Strike 7.19 
+Tiempo de consulta total: 348.627µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 420
+Resultado de GetById(): 420 Half-Life 2: Episode Two 5.79 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 33.412537ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 420
+Resultado obtenido desde la caché Redis: 420 Half-Life 2: Episode Two 5.79 
+Tiempo de consulta total: 535.809µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 440
+Resultado de GetById(): 440 Team Fortress 2 0 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 42.355152ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 440
+Resultado obtenido desde la caché Redis: 440 Team Fortress 2 0 
+Tiempo de consulta total: 402.595µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 500
+Resultado de GetById(): 500 Left 4 Dead 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 6.177396ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 550
+Resultado de GetById(): 550 Left 4 Dead 2 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 3.389582ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 570
+Resultado de GetById(): 570 Dota 2 0 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 3.039156ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 570
+Resultado obtenido desde la caché Redis: 570 Dota 2 0 
+Tiempo de consulta total: 244.844µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 620
+Resultado de GetById(): 620 Portal 2 7.19 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 4.389411ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 620
+Resultado obtenido desde la caché Redis: 620 Portal 2 7.19 
+Tiempo de consulta total: 281.19µs
+Ingrese un ID (-1 para GetAll, 0 para salir): 730
+Resultado de GetById(): 730 Counter-Strike: Global Offensive 0 
+Resultado almacenado en Redis con éxito.
+Tiempo de consulta total: 4.083544ms
+Ingrese un ID (-1 para GetAll, 0 para salir): 730
+Resultado obtenido desde la caché Redis: 730 Counter-Strike: Global Offensive 0 
+Tiempo de consulta total: 319.422µs
